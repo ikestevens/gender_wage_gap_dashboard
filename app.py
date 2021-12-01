@@ -45,4 +45,4 @@ app7.layout = html.Div(
 
 
 if __name__ == '__main__':
-    app7.run_server(mode='inline', debug=True, port=8051)
+    app7.run_server(debug=True, port=8051, host='0.0.0.0')
