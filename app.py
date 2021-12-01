@@ -5,6 +5,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import plotly.figure_factory as ff
 import dash
+import flask
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
@@ -103,7 +104,8 @@ prob5_2 = px.box(gss_clean, x='job_prestige', color = 'sex',
                    title="Occupational Prestige Distribution By Gender",
                    color_discrete_map = {'male':'blue', 'female':'red'})
 
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+server = flask.Flask(__name__)
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets, server = server)
 server = app.server
 
 
