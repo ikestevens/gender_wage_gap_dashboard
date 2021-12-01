@@ -104,8 +104,7 @@ prob5_2 = px.box(gss_clean, x='job_prestige', color = 'sex',
                    title="Occupational Prestige Distribution By Gender",
                    color_discrete_map = {'male':'blue', 'female':'red'})
 
-server = flask.Flask(__name__)
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets, server = server)
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 server = app.server
 
 
