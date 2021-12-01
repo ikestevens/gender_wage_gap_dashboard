@@ -32,6 +32,7 @@ understand and research American societal changes and trends.
 '''
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+server = app.server
 
 app.layout = html.Div(
     [
