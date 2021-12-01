@@ -5,7 +5,6 @@ import plotly.express as px
 import plotly.graph_objects as go
 import plotly.figure_factory as ff
 import dash
-from jupyter_dash import JupyterDash
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
@@ -31,9 +30,9 @@ understand and research American societal changes and trends.
 
 '''
 
-app7 = JupyterDash(__name__, external_stylesheets=external_stylesheets)
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
-app7.layout = html.Div(
+app.layout = html.Div(
     [
         html.H1("Gender Wage Gap Dashboard"),
 
@@ -45,4 +44,4 @@ app7.layout = html.Div(
 
 
 if __name__ == '__main__':
-    app7.run_server(debug=True, port=8051, host='0.0.0.0')
+    app.run_server(debug=True, port=8051, host='0.0.0.0')
